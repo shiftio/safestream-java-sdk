@@ -1,5 +1,16 @@
-# safestream-java-sdk
-SafeStream SDK for Java
+# SafeStream Java SDK
+
+```java
+// Create a new SafeStream video
+SafeStreamAPI safestream = new SafeStreamAPI("MY API KEY");
+Video video = safestream
+            .video()
+            .create(new Video()
+                .withSourceUrl("http://www.nasa.gov/downloadable/videos/occultationgraphh264fullsize.mp4"));
+```
+
+#### Overview
+The SafeStream java SDK provides an interface for watermarking video through SafeStream. It is both a wrapper around and abstraction of the [SafeStream REST API](http://docs.safestream.com). The SDK provides a fluent interface for creating and manages videos in SafeStream as well as watermarking videos.
 
 #### Installation
 
