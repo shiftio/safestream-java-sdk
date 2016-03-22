@@ -1,4 +1,7 @@
+![SafeStream Logo](https://raw.githubusercontent.com/mediasilo/safestream-java-sdk/master/logo.png?token=AA_n6HCPMSl2IJUZ9lYONolRwcuSenMkks5W-uNOwA%3D%3D) 
 # SafeStream Java SDK
+
+
 
 ```java
 // Create a new SafeStream video
