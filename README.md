@@ -15,7 +15,7 @@ The SafeStream java SDK provides an interface for watermarking video through Saf
 #### Installation
 
 ##### Gradle
-```
+```gradle
 repositories {
     mavenCentral()
     maven {
@@ -35,7 +35,7 @@ dependencies {
 ```
 
 ##### Maven
-```
+```maven
   <repository>
       <id>repo.safestream.com-releases</id>
       <name>SafeStream Repository</name>
@@ -60,3 +60,47 @@ dependencies {
       <version>1.0.0</version>
   </dependency>
 ```
+
+#### Getting Started
+##### Instantiating the client
+The client can be reused. You only need to create the client once for your application.
+```java
+SafeStreamAPI safestream = new SafeStreamAPI("MY API KEY");
+```
+
+#### Video Examples
+##### Create a new video from URL
+```java
+Video video = safestream
+                .video()
+                .create(new Video()
+                    .withSourceUrl("http://www.nasa.gov/downloadable/videos/occultationgraphh264fullsize.mp4"));
+```
+
+##### Create a new video with my own key
+```java
+Video video = safestream
+                .video()
+                .create(new Video()
+                    .withKey("MY SPECIAL KEY")
+                    .withSourceUrl("http://www.nasa.gov/downloadable/videos/occultationgraphh264fullsize.mp4"));
+```
+
+##### Create a new video with tags
+```java
+Video video = safestream
+                .video()
+                .create(new Video()
+                    .withTags(Arrays.asList("sun", "ekg"))
+                    .withSourceUrl("http://www.nasa.gov/downloadable/videos/occultationgraphh264fullsize.mp4"));
+```
+#### Video Properties
+Name | Description
+------------ | -------------
+key | This can be an external key of any string value. If no value is given when the video is created then the key will be the source URL.
+name | An optional descriptive name for a video
+sourceUrl | The URL where the video source exists at the time of creating this video. Currently, http and https URLs are supported
+targetBitRate | Target bit rate in kilobits. For example to create a 4Mb proxy this value would be 4000k.
+allowHmacAuth | If we should use signed URLs for access tto he watermarked segments and M3U8 of this videos watermarked versions. Defaults to true.
+encrypt |  If we should encrypt the watermarked segments of this video at rest. Defaults to true.
+status | The ingest status of this video <code>PENDING, INGESTED</code>.  Videos can only be watermarked that are in the <code>INGESTED</code> status
