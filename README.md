@@ -162,3 +162,26 @@ targetBitRate | Target bit rate in kilobits. For example to create a 4Mb proxy t
 allowHmacAuth | If we should use signed URLs for access tto he watermarked segments and M3U8 of this videos watermarked versions. Defaults to true.
 encrypt |  If we should encrypt the watermarked segments of this video at rest. Defaults to true.
 status | The ingest status of this video <code>PENDING, INGESTED</code>.  Videos can only be watermarked that are in the <code>INGESTED</code> status
+
+#### License
+ MIT License
+ 
+ Copyright (c) 2016 MediaSilo
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in all
+ copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
