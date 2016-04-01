@@ -1,6 +1,7 @@
+![SafeStream logo](https://www.filepicker.io/api/file/4kub5cbVRLmfteT3vqFK)
+
+
 # SafeStream Java SDK
-
-
 
 ```java
 // Create a new SafeStream video
